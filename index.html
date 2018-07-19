@@ -1,115 +1,37 @@
 <!DOCTYPE html>
+<html manifest="offlinedatabase.manifest" lang="pt-br">
 <head>
-<title>Page Title</title>
-<style type="text/css">
-.modal {
-	position: fixed;
-	font-family: Arial, Helvetica, sans-serif;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: rgba(0,0,0,0.8);
-	z-index: 99999;
-	opacity:0;
-	-webkit-transition: opacity 400ms ease-in;
-	-moz-transition: opacity 400ms ease-in;
-	transition: opacity 400ms ease-in;
-	pointer-events: none;
-}
-
-.modal:target {
-	opacity:1;
-	pointer-events: auto;
-}
-
-.modal-box {
-	background: #ffffff;
-	width: 60%;
-	height: 300px;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	margin-left: -30%;
-	margin-top: -150px;
-}
-
-.fechar {
-	background: #606061;
-	color: #FFFFFF;
-	line-height: 25px;
-	position: absolute;
-	right: -12px;
-	text-align: center;
-	top: -10px;
-	width: 24px;
-	text-decoration: none;
-	font-weight: bold;
-	-webkit-border-radius: 12px;
-	-moz-border-radius: 12px;
-	border-radius: 12px;
-	-moz-box-shadow: 1px 1px 3px #000;
-	-webkit-box-shadow: 1px 1px 3px #000;
-	box-shadow: 1px 1px 3px #000;
-}
-
-.fechar:hover { background: #00d9ff; }
-
-</style>
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+    <title>Cadastro de Filmes</title>
 </head>
-
 <body>
-<script language="javascript">
-function Mudarestado(el) {
-    var display = document.getElementById(el).style.display;
-    if(display == "none")
-        //document.getElementById(el).style.display = 'block';
-		document.getElementById(el).style.visibility = 'visible';
-    else
-        document.getElementById(el).style.display = 'none';
+<div id="interface">
+	
+<header id="cabecalho">
+	<hgroup>
+	<h1>Cadastro<br> de Filmes</h1>
+	<!--<h2>Agenda de Massagem</h2>-->
+	</hgroup>
 
-}
-function pesquisa() {
-	var table = document.getElementById('tbody-pesq');
-	var tr = '<tr>';
-	document.getElementById("abrirModal").style.display = "inline";
-	tr += '<td onClick="Aviso()">linha 1 coluna 1</td><td>linha 1 coluna 2</td>';
-	tr += '<td>linha 2 coluna 1</td><td>linha 2 coluna 2</td>';
-	tr += '<td>linha 3 coluna 1</td><td>linha 3 coluna 2</td>';
-	tr += '<td>linha 4 coluna 1</td><td>linha 4 coluna 2</td>';
-	tr += '<td>linha 5 coluna 1</td><td>linha 5 coluna 2</td>';
-	table.innerHTML = tr;
-}
-function Aviso() {
-	alert("Exemplo muito certo");
-	document.getElementById("abrirModal").style.display = "none";
-}
-function abreModal() {
-	document.getElementById("abrirModal").style.display = "inline";
-	document.getElementById("abrirModal").style.visibility = 'visible';
-}
+<nav id="menu">
+	<h1>Menu Principal</h1>
+	<!-- <ol type="1" start="1"> -->
+	 <ul type="desc">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="cadastro.html">Cadastro</a></li>
+		<li><a href="copia.html">Recuperação de Dados</a></li>
+	</ul>
+</nav>
 
-</script>
+</header>
 
-<div id="minhaDiv">Conteudo</div>
+<footer id="rodape">
 
-<button type="button" onclick="Mudarestado('abrirModal')">Mostrar / Esconder</button>
+<p>Copyright &copy, 2016 - by Aparicio L Quevedo e Arthur W P Quevedo<br/></p>
 
-<a href="#abrirModal" onclick="pesquisa()">Open Modal</a>
+</footer>
 
-<div id="abrirModal" class="modal">
-	<div class="modal-box">
-		<div class="modal-box-conteudol">
-			<h2>Janela Modal</h2>
-			<a href="#fechar" title="Fechar" class="fechar">x</a>
-			<table id="table-pesq" border="1">
-				<thead></thead>
-				<tbody id="tbody-pesq">
-				</tbody>
-			</table>
-		</div>
-	</div>
 </div>
-
 </body>
 </html>
