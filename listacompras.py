@@ -34,11 +34,12 @@ def retDataHora():
 
 #-----------------------------------------------------------
 def criaHTML():
-	pagina = open("index.html","w",encoding="ISO-8859-15")
+	pagina = open("index.html","w",encoding="utf-8")
 	pagina.write("""
 <html lang="pt-br">
 <head>
 	<meta charset="ISO-8859-15"/>
+	<meta charset="utf-8"/>
 	<title>Lista de Preços</title>
 <style type="text/css">
 body {
