@@ -1,37 +1,100 @@
-ï»¿<!DOCTYPE html>
-<html manifest="offlinedatabase.manifest" lang="pt-br">
+
+<html lang="pt-br">
 <head>
-	<meta charset="UTF-8"/>
-	<link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
-    <title>Cadastro de Filmes</title>
+	<meta charset="ISO-8859-15"/>
+	<title>Lista de Preços</title>
+<style type="text/css">
+body {
+    background-color: white; 
+} 
+h1 { 
+    color: red; 
+    padding: 0px; 
+	font-size: 50px;
+}
+h2 { 
+    color: blue; 
+    padding: 0px; 
+	font-size: 20px;
+	text-align: center;
+}
+h3 { 
+    color: green; 
+    padding: 0px; 
+	font-size: 35px;
+}
+div#cabecalho {
+	font-family: 'FonteLogo', sans-serif;
+	color: #606060;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+	margin-bottom: 0px;
+	text-align: center;
+}
+table#tablista {
+	border: 3px solid #606060;
+	border-spacing: 5px;
+	margin-left: auto;
+	margin-right: auto;	
+	font-size: 30px;
+	font-weight: bolder;
+}
+</style>
+<script>
+	function EscreveData() {
+		var mydate=new Date()
+		var year=mydate.getYear()
+		if (year < 1000)
+			year+=1900
+		var day=mydate.getDay()
+		var month=mydate.getMonth() + 1
+		var daym=mydate.getDate()
+		if (daym<10)
+			daym="0"+daym
+		document.write(daym +"/"+month + "/" +year)
+}
+</script>
 </head>
+
 <body>
-<div id="interface">
-	
-<header id="cabecalho">
-	<hgroup>
-	<h1>Cadastro<br> de Filmes  versÃ£o 3</h1>
-	<!--<h2>Agenda de Massagem</h2>-->
-	</hgroup>
-
-<nav id="menu">
-	<h1>Menu Principal</h1>
-	<!-- <ol type="1" start="1"> -->
-	 <ul type="desc">
-		<li><a href="index.html">Home</a></li>
-		<li><a href="cadastro.html">Cadastro</a></li>
-		<li><a href="copia.html">RecuperaÃ§Ã£o de Dados</a></li>
-	</ul>
-</nav>
-
-</header>
-
-<footer id="rodape">
-
-<p>Copyright &copy, 2016 - by Aparicio L Quevedo e Arthur W P Quevedo<br/></p>
-
-</footer>
-
+<div id="cabecalho">
+	<h1>Lista de Compras<h1>
+	<h2>Data Atual:<script>EscreveData();</script></h2>
 </div>
+
+<table id="tablista" border='1'>
+
+<h2>Atualizada em: 20/7/2018 às 22:4:3<h2>
+<tr>
+<td>Qtd.</td>
+<td>Un.</td>
+<td>Descrição</td>
+</tr>
+<tr>
+<td>3</td>
+<td>sc</td>
+<td>leite</td>
+</tr>
+<tr>
+<td>1</td>
+<td>pc</td>
+<td>papel higiênico</td>
+</tr>
+<tr>
+<td>1</td>
+<td>pt</td>
+<td>geleia</td>
+</tr>
+<tr>
+<td>2</td>
+<td>tb</td>
+<td>manteiga</td>
+</tr>
+<tr>
+<td>2</td>
+<td>kg</td>
+<td>Feijão</td>
+</tr>
+
+</table>
 </body>
 </html>

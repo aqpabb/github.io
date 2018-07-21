@@ -1,0 +1,6 @@
+Qtd.,Un.,Descrição
+3,sc,leite
+1,pc,papel higiênico
+1,pt,geleia
+2,tb,manteiga
+2,kg,Feijão
