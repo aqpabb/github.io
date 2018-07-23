@@ -1,4 +1,4 @@
-# -- coding: utf-8 --
+﻿# -- coding: utf-8 --
 from datetime import datetime
 import subprocess
 
@@ -103,13 +103,17 @@ table#tablista {
 
 """)
 	pagina.write('<h2>Atualizada em: ' + retDataHora() +'<h2>\n')
+	n = 0
 	for linha in LC:
 		pagina.write('<tr>\n')
 		s = linha.split(',')
+		ord = 'Nr.' if(n == 0) else str(n)
+		pagina.write('<td>' + ord + '</td>\n')
 		pagina.write('<td>' + s[0] + '</td>\n')
 		pagina.write('<td>' + s[1] + '</td>\n')
 		pagina.write('<td>' + s[2] + '</td>\n')
 		pagina.write('</tr>\n')
+		n = n + 1
 	pagina.write("""
 </table>
 </body>
@@ -123,7 +127,7 @@ def abreComandosGit():
 #-----------------------------------------------------------
 # Aqui começa o programa
 
-#verLista()
+verLista()
 leListaCompras()
 criaHTML()
 abreComandosGit()

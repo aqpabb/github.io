@@ -1,6 +1,9 @@
 Qtd.,Un.,Descrição
 3,sc,leite
-1,pc,papel higiênico
-1,pt,geleia
-2,tb,manteiga
-2,kg,Feijão
+1,lt,Pimenta do Reino
+1,pt,Alho
+1.5,Kg,Tomate
+1.5,Kg,Cebola
+2,Kg,Batata doce
+2,Kg,Batata Inglesa
+2,Kg,Banana
