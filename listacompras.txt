@@ -7,3 +7,5 @@ Qtd.,Un.,Descrição
 2,Kg,Batata doce
 2,Kg,Batata Inglesa
 2,Kg,Banana
+1,pc,Sabão Azul
+3,lt,Milho Verde
