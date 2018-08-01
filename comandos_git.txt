@@ -1,11 +1,10 @@
-path para o git
-C:\Program Files\Git\git-bash.exe --cd-to-home
-
-
 Comandos para iniciar repositorio:
+Configuração:
+
 git config --global user.name "aqpabb"
 git config --global user.email "aqpa.bb@gmail.com"
-// de dentro da psta do projeto
+
+# De dentro da pasta do projeto
 git init
 git status
 git add .
@@ -15,13 +14,21 @@ git remote add origin https://github.com/aqpabb/github.io
 git put -u origin master
 
 
-
 Comandos para atualizar arquivo:
 
-git add .
-git commit -m "mensagem"
+Faz Upload somente de index.html
+Usar CTRL+C  CTRL+V
+
+function atual {
+git add index.html
+git commit -m "commit atual"
 git push
 git status
+};atual;
+
+
+Faz Upload de todos os arquivos
+Usar CTRL+C  CTRL+V
 
 function atual {
 git add .
@@ -31,14 +38,5 @@ git status
 };atual;
 
 
-function atual {
-git status
-ls
-};atual;
-
-
-
-
 Link para a página Lista de Preços:
-
 https://aqpabb.github.io/github.io/

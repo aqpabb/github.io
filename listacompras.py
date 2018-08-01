@@ -13,10 +13,12 @@ def leListaCompras():
 		with open('listacompras.txt', 'r') as arq:
 			for linha in arq:
 				try:
-					linha = linha.replace('\n','')
-					s = linha.split(",")
-					if(len(s)>2):
-						LC.append(s[0] + ',' + s[1] + ',' + s[2])
+					linha = linha.replace('\n','') 
+					if(len(linha)>0):
+						if(linha[0] != '#'):
+							s = linha.split(",")
+							if(len(s)>2):
+								LC.append(s[0] + ',' + s[1] + ',' + s[2])
 				except ValueError:
 					pass
 	except IOError as err:
